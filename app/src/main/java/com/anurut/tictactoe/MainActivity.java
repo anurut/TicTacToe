@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import static com.anurut.tictactoe.R.string.resetButtonClear;
@@ -21,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     int activePlayer = 0;
     boolean gameActive = true;
     int count = 0;
-    int x_wins = 0;
-    int o_wins = 0;
+    public int x_win_count = 0;
+    public int o_win_count = 0;
     int reset = 0;
 
 
@@ -95,14 +94,14 @@ public class MainActivity extends AppCompatActivity {
                 // Somebody has won. Find put who!
                 if (gameState[winPosition[0]] == 0) {
                     winner = "X has won";
-                    x_wins++;
-                    xScore.setText("X's Score : " + x_wins);
+                    x_win_count++;
+                    xScore.setText("X's Score : " + x_win_count);
                     gameActive = false;
                     break;
                 } else {
                     winner = "O has won";
-                    o_wins++;
-                    oScore.setText("O's Score : " + o_wins);
+                    o_win_count++;
+                    oScore.setText("O's Score : " + o_win_count);
                     gameActive = false;
                     break;
                 }
@@ -124,8 +123,8 @@ public class MainActivity extends AppCompatActivity {
             setResetButton("Clear");
         } else {
             gameReset();
-            x_wins = 0;
-            o_wins = 0;
+            x_win_count = 0;
+            o_win_count = 0;
             xScore.setText(R.string.x_score_default);
             oScore.setText(R.string.o_score_default);
             setResetButton("Reset");
