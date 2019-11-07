@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Tic-Tac-Toe</string>
+    <string name="heading">Let\'s Play Tic-Tac-Toe</string>
+    <string name="grid">base_grid</string>
+    <string name="x_turn">X\'s turn</string>
+    <string name="o_turn">O\'s turn</string>
+    <string name="resetButtonDefault">Reset</string>
+    <string name="resetButtonClear">Clear</string>
+    <string name="count">Count : 0</string>
+    <string name="x_score_default">X\'s Score : 0</string>
+    <string name="x_score">X\'s Score : </string>
+    <string name="o_score_default">O\'s Score : 0</string>
+    <string name="o_score">O\'s Score : </string>
+</resources>
